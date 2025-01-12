@@ -9,4 +9,10 @@ movies_list = {
     'smrtvdesti': 'Smrt v dešti je arabská detektivka',
 }
 
-
+def allmovies_text(request, moviename):
+    try:
+        movie_info = movies_list[moviename]
+        return HttpResponse(movie_info)
+    except:
+        return HttpResponseNotFound('Film nebyl nalezen.')
+    
