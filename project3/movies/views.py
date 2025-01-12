@@ -9,6 +9,18 @@ movies_list = {
     'smrtvdesti': 'Smrt v dešti je arabská detektivka.',
 }
 
+def index(request):
+    content = ''
+    
+    movies_names = list(movies_list.keys())
+    content += '<ul>'
+    for one_movie in movies_names:
+        url = reverse('movie_url', args=[one_movie])
+        content += f'<li><a href="{url}">{one_movie}</a></li>'
+    content += '</ul>'
+    return HttpResponse(content)
+
+
 def allmovies_text(request, moviename):
     try:
         movie_info = movies_list[moviename]
