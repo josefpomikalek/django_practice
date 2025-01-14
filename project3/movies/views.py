@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 # Create your views here.
 movies_list = {
@@ -23,8 +24,9 @@ def index(request):
 
 def allmovies_text(request, moviename):
     try:
-        movie_info = movies_list[moviename]
-        return HttpResponse(movie_info)
+        # movie_info = movies_list[moviename]
+        response_data = render_to_string ('movies/movie.html')
+        return HttpResponse(response_data)
     except:
         return HttpResponseNotFound('Film nenalezen.')
 
