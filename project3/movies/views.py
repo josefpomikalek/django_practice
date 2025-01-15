@@ -27,7 +27,10 @@ def allmovies_text(request, moviename):
         # movie_info = movies_list[moviename]
         # response_data = render_to_string ('movies/movie.html')
         # return HttpResponse(response_data)
-        return render(request, 'movies/movie.html')
+        return render(request, 'movies/movie.html', {
+            'mytext': 'Josef Pomikálek',
+            'movie_name': moviename.upper(),
+        })
     except:
         return HttpResponseNotFound('Film nenalezen.')
 
