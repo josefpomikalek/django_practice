@@ -29,7 +29,7 @@ def allmovies_text(request, moviename):
         # return HttpResponse(response_data)
         return render(request, 'movies/movie.html', {
             'mytext': 'Josef Pomikálek',
-            'movie_name': moviename.upper(),
+            'movie_name': moviename,
         })
     except:
         return HttpResponseNotFound('Film nenalezen.')
