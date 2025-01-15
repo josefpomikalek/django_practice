@@ -11,16 +11,10 @@ movies_list = {
 }
 
 def index(request):
-    content = ''
-    
     movies_names = list(movies_list.keys())
-    content += '<ul>'
-    for one_movie in movies_names:
-        url = reverse('movie_url', args=[one_movie])
-        content += f'<li><a href="{url}">{one_movie}</a></li>'
-    content += '</ul>'
-    return HttpResponse(content)
-
+    return render(request, 'movies/index.html', {
+        'movies_names': movies_names,
+    })
 
 def allmovies_text(request, moviename):
     try:
