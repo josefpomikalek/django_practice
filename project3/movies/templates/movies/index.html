@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Úvodní strana</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block page_title %}
+    Úvodní strana
+{% endblock %}
+
+{% block content %}
     <h1>Filmy</h1>
     <ul>
         {% for one_movie in movies_names %}
             <li><a href="{% url 'movie_url' one_movie %}">{{ one_movie }}</a></li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
