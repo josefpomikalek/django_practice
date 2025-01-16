@@ -9,7 +9,7 @@
     <h1>Filmy</h1>
     <ul>
         {% for one_movie in movies_names %}
-            <li><a href="">{{ one_movie }}</a></li>
+            <li><a href="{% url 'movie_url' one_movie %}">{{ one_movie }}</a></li>
         {% endfor %}
     </ul>
 </body>
