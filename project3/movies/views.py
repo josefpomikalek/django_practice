@@ -8,6 +8,7 @@ movies_list = {
     'harrypotter': 'Harry Potter je čaroděj.',
     'mortalcombat': 'Mortal Combat je zvláštní film.',
     'smrtvdesti': 'Smrt v dešti je arabská detektivka.',
+    'forrestgump': None,
 }
 
 def index(request):
@@ -24,6 +25,7 @@ def allmovies_text(request, moviename):
         return render(request, 'movies/movie.html', {
             'mytext': 'Josef Pomikálek',
             'movie_name': moviename,
+            'movie_description': movies_list[moviename],
         })
     except:
         return HttpResponseNotFound('Film nenalezen.')
