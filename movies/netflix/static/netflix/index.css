@@ -36,3 +36,15 @@ header {
 .header-top button:hover {
     background-color: #b41820;
 }
+
+/* header textbox part */
+
+.header-textbox {
+    height: 80vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
