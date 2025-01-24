@@ -41,7 +41,7 @@ header {
 
 .header-textbox {
     height: 80vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,4 +54,47 @@ header {
     width: 500px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.header-textbox p:nth-child(2) {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.header-textbox p:nth-child(3) {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.header-textbox form {
+    display: flex;
+    align-items: center;
+}
+
+.header-textbox form input {
+    width: 400px;
+    height: 60px;
+    background: linear-gradient(rgba(59, 57, 57, 0.74), rgba(0, 0, 0, 0.648));
+    border: 0.5px solid white;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.header-textbox form button {
+    height: 60px;
+    margin-left: 10px;
+    padding: 10px 25px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.header-textbox form button:hover {
+    background-color: #b41820;
 }
