@@ -1,13 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Netflix | Úvodní strana{% endblock title %}
 
-{% block css_files %}{% endblock css_files %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "netflix/index.css" %}">
+{% endblock css_files %}
 
 {% block content %}
     <main>
         <section id="logo">
-            <img src="" alt="">
+            <img src="{% static "netflix/images/netflix-logo.png" %}" alt="">
         </section>
     </main>
 {% endblock content %}
