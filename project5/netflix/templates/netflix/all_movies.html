@@ -12,8 +12,9 @@
 {% block content %}
     <main>
        <section class="all-movies">
-        
+            {% for one_movie in all_movies_list %}
+                {% include "netflix/includes/one_movie.html" %}
+            {% endfor %}
        </section>
     </main>
-
 {% endblock content %}

@@ -67,5 +67,5 @@ def starting_page(request):
     return render(request, 'netflix/index.html')
 
 def all_movies_page(request):
-    return render(request, 'netflix/all_movies.html')
+    return render(request, 'netflix/all_movies.html', {'all_movies_list': movies,})
 
