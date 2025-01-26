@@ -1,9 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Všechny filmy | Netflix{% endblock title %}
 
 
-{% block css_files %}{% endblock css_files %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "netflix/all_movies.css" %}">
+{% endblock css_files %}
 
 
 {% block content %}
