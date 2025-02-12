@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{% endblock title %}
 
-{% block css_files %}{% endblock css_files %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "movies/all-movies.css" %}">    
+{% endblock css_files %}
 
 {% block content %}{% endblock content %}
