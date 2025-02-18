@@ -2,12 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def start(request):
-    pass
+    return render(request, 'movies/index.html')
 
 
 def all_movies(request):
-    pass
+    return render(request, 'movies/all-movies.html')
 
 
 def movie_detail(request):
-    pass
+    return render(request, 'movies/movie-detail.html')
+
