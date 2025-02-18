@@ -7,4 +7,10 @@
     <link rel="stylesheet" href="{% static "movies/index.css" %}">
 {% endblock css_files %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+    <main>
+        <section class="button">
+            <a href="{% url "all-movies-page" %}">Vítejte na Netflixu</a>
+        </section>
+    </main>
+{% endblock content %}
