@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from datetime import date
 
+
 movies = [
     {
         'image': 'avengers.jpg',
@@ -65,7 +66,9 @@ def start(request):
 
 
 def all_movies(request):
-    return render(request, 'movies/all-movies.html')
+    return render(request, 'movies/all-movies.html', {
+        'all_movies': movies,
+    })
 
 
 def movie_detail(request):

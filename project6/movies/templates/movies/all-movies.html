@@ -7,4 +7,12 @@
     <link rel="stylesheet" href="{% static "movies/all-movies.css" %}">    
 {% endblock css_files %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+    <ul>
+        {% for one_movie in all_movies %}
+            <a href="{% url "movie-detail-page" one_movie.slug %}">
+                <img src="{% static "movies/images/"|add:one_movie.image %}" alt="">
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock content %}
