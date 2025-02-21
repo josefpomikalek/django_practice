@@ -1,0 +1,22 @@
+.one-movie-box {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-movie {
+    text-align: center;
+    width: 450px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.one-movie img {
+    width: 250px;
+    height: 370px;
+}

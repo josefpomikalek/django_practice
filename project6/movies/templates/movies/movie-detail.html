@@ -8,9 +8,16 @@
 {% endblock css_files %}
 
 {% block content %}
-    <img src="{% static "movies/images/"|add:visited_movie.image %}" alt="">
-    <h1>{{ visited_movie.title }}</h1>
-    <p>{{ visited_movie.author }}</p>
-    <p>{{ visited_movie.content }}</p>
-    <p>{{ visited_movie.data }}</p>
+    <main>
+        <section class="one-movie-box">
+            <div class="one-movie">
+                <img src="{% static "movies/images/"|add:visited_movie.image %}" alt="">
+                <h1>{{ visited_movie.title }}</h1>
+                <p>{{ visited_movie.author }}</p>
+                <p>{{ visited_movie.content }}</p>
+                <p>{{ visited_movie.data }}</p>
+            </div>
+        </section>
+    </main>
+
 {% endblock content %}
