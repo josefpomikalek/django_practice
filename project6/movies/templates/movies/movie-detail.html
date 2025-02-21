@@ -7,4 +7,10 @@
     <link rel="stylesheet" href="{% static "movies/movie-detail.css" %}">
 {% endblock css_files %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+    <img src="{% static "movies/images/"|add:visited_movie.image %}" alt="">
+    <h1>{{ visited_movie.title }}</h1>
+    <p>{{ visited_movie.author }}</p>
+    <p>{{ visited_movie.content }}</p>
+    <p>{{ visited_movie.data }}</p>
+{% endblock content %}

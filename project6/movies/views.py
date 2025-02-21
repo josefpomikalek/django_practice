@@ -71,6 +71,9 @@ def all_movies(request):
     })
 
 
-def movie_detail(request):
-    return render(request, 'movies/movie-detail.html')
+def movie_detail(request, slug):
+    identified_movie = next(movie for movie in movies if movie['slug'] == slug)
+    return render(request, 'movies/movie-detail.html', {
+        'visited_movie': identified_movie,
+    })
 
