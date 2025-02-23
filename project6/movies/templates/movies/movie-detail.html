@@ -11,6 +11,7 @@
     <main>
         <section class="one-movie-box">
             <div class="one-movie">
+                <a href="{% url "all-movies-page" %}">Zpět na všechny filmy</a>
                 <img src="{% static "movies/images/"|add:visited_movie.image %}" alt="">
                 <h1>{{ visited_movie.title }}</h1>
                 <p>{{ visited_movie.author }}</p>
